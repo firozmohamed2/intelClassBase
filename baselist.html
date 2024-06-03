@@ -10,6 +10,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             text-align: center;
+            background-color: #ffffff;
         }
         header {
             background-color: #000000;
@@ -18,7 +19,7 @@
             text-align: left;
             margin-left: 0;
         }
-        header h3{
+        header h3 {
             margin-left: 20px;
         }
         .container {
@@ -28,10 +29,10 @@
         }
         .name-item {
             padding: 30px;
-            margin: 20px 0;
+            margin: 10px 0;
             border: 2px solid #ccc;
-            border-radius: 15px;
-            background-color: white;
+            border-radius: 0px;
+            background-color: #F6F9FE;
             cursor: pointer;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s;
@@ -43,11 +44,11 @@
         .popup {
             position: fixed;
             bottom: 0;
-            width: calc(100% - 60px); /* Account for 30px margin on each side */
-            margin: 0 30px 30px 30px; /* 30px margin on the left, right, and bottom */
+            width: calc(100% - 2px); /* Account for 30px margin on each side */
+            margin: 0 0px 30px 0px; /* 30px margin on the left, right, and bottom */
             background-color: white;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
             box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             display: flex;
@@ -64,10 +65,8 @@
             flex: 1;
         }
         .popup-image {
-            width: calc(100% - 60px); /* Account for 30px margin on each side */
-            margin: 30px; /* 30px margin around the image */
+            width: 100%;
             position: relative;
-            padding-top: 56.25%; /* 16:9 aspect ratio */
             background-size: cover;
             background-position: center;
         }
@@ -91,109 +90,105 @@
         .audio-player input[type="range"] {
             width: 80%;
         }
-        .minimize-button {
+
+         .minimize-button{
+            background: #ffffff;
+            font-size: 24px;
+            font-family: 'Orbitron', sans-serif; 
+            border: #ffffff;
+            margin-bottom: 15px;
+
+         }
+
+        /* .minimize-button {
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: -30px; 
+            left: 50%;
+            transform: translateX(-50%);
             background: none;
             border: none;
             font-size: 24px;
             cursor: pointer;
             color: gray;
-            font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+            font-family: 'Orbitron', sans-serif; 
+            z-index: 10;
+        } */
+        .button-17 {
+            align-items: center;
+            appearance: none;
+            background-color: #ffffff;
+            border-radius: 4px;
+            border-style: none;
+            box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+            box-sizing: border-box;
+            color: #3c4043;
+            cursor: pointer;
+            display: inline-flex;
+            fill: currentcolor;
+            font-family: "Google Sans", Roboto, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            height: 60px;
+            justify-content: center;
+            letter-spacing: .25px;
+            line-height: normal;
+            overflow: visible;
+            padding: 2px 12px;
+            position: relative;
+            text-align: center;
+            text-transform: none;
+            transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 100%; /* Default width as 80% */
+            max-width: 1000px; /* Maximum width of 800px */
+            will-change: transform, opacity;
+            z-index: 0;
+            margin-top: 10px;
         }
-
-
-
-
-
-/* CSS */
-.button-17 {
-  align-items: center;
-  appearance: none;
-  background-color: #fff;
-  border-radius: 12px;
-  border-style: none;
-  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
-  box-sizing: border-box;
-  color: #3c4043;
-  cursor: pointer;
-  display: inline-flex;
-  fill: currentcolor;
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  height: 60px;
-  justify-content: center;
-  letter-spacing: .25px;
-  line-height: normal;
-  overflow: visible;
-  padding: 2px 24px;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 90%; /* Default width as 80% */
-  max-width: 800px; /* Maximum width of 800px */
-  will-change: transform, opacity;
-  z-index: 0;
-}
-
-.button-17:hover {
-  background: #F6F9FE;
-  color: #174ea6;
-}
-
-.button-17:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
-  outline: none;
-}
-
-.button-17:focus {
-  outline: none;
-  border: 2px solid #4285f4;
-}
-
-.button-17:not(:disabled) {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.button-17:not(:disabled):hover {
-  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
-}
-
-.button-17:not(:disabled):focus {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.button-17:not(:disabled):active {
-  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
-}
-
-.button-17:disabled {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-
+        .button-17:hover {
+            background: #F6F9FE;
+            color: #174ea6;
+        }
+        .button-17:active {
+            box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+            outline: none;
+        }
+        .button-17:focus {
+            outline: none;
+            border: 2px solid #4285f4;
+        }
+        .button-17:not(:disabled) {
+            box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+        }
+        .button-17:not(:disabled):hover {
+            box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+        }
+        .button-17:not(:disabled):focus {
+            box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+        }
+        .button-17:not(:disabled):active {
+            box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+        }
+        .button-17:disabled {
+            box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h3>chemistry important 150 </h3>
+        <h3>Chemistry Important 150</h3>
     </header>
     <div class="container">
-
         <div id="nameList"></div>
     </div>
     
     <div class="popup minimized" id="popup">
-        <button class="minimize-button" id="minimize-button">—</button>
+        <button class="minimize-button" id="minimize-button">v</button>
         <div class="popup-content-wrapper">
-            <div class="popup-image" id="popup-image"
-                style="background-image: url('');">
+            <div class="popup-image" id="popup-image">
+                <img id="popup-img" src="" alt="Popup Image" style="width: 100%; display: none;">
             </div>
             <div class="popup-content">
                 <h4 id="description">
@@ -201,24 +196,23 @@
                     In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. Wikipedia
                     In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. Wikipedia
                     In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. Wikipedia
-             
                 </h4>
             </div>
         </div>
         <div class="audio-player">
             <button id="play-pause">▶️</button>
-            <input type="range" id="seek" value="0" step="1" />
+            <input type="range" id="seek" value="0">
         </div>
     </div>
-
+    
     <audio id="audio"></audio>
-
+    
     <!-- Firebase SDKs -->
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
         import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js";
-
+    
         // Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyA88fPkOvcI4QA9qD3ROpk-ay-V6ibQQlc",
@@ -229,16 +223,16 @@
             appId: "1:269589994279:web:4c617a622c328a1224e702",
             measurementId: "G-D8MD1J28GR"
         };
-
+    
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-
+    
         // Initialize Firestore
         const db = getFirestore(app);
-
+    
         async function displayNames() {
             const nameList = document.getElementById('nameList');
-
+    
             try {
                 // Get all documents from the intelclass collection
                 const querySnapshot = await getDocs(collection(db, 'intelclass'));
@@ -246,16 +240,15 @@
                     // Create a div for each document's name field
                     const nameDiv = document.createElement('div');
                     nameDiv.textContent = doc.data().name;
-                   // nameDiv.classList.add('name-item');
-                   nameDiv.classList.add('button-17');
+                    nameDiv.classList.add('button-17');
                     nameDiv.dataset.imageUrl = doc.data().imageUrl;
                     nameDiv.dataset.audioUrl = doc.data().audioUrl;
-
+    
                     // Add a click event listener to the div
                     nameDiv.addEventListener('click', () => {
                         openModal(doc.data().imageUrl, doc.data().audioUrl);
                     });
-
+    
                     nameList.appendChild(nameDiv);
                 });
             } catch (error) {
@@ -263,29 +256,35 @@
                 alert('Failed to retrieve documents.');
             }
         }
-
+    
         // Call the function to display names when the page loads
         window.onload = displayNames;
-
+    
         function openModal(imageUrl, audioUrl) {
             const popup = document.getElementById('popup');
-            const popupImage = document.getElementById('popup-image');
+            const popupImg = document.getElementById('popup-img');
             const audio = document.getElementById('audio');
-
-            popupImage.style.backgroundImage = `url(${imageUrl})`;
+    
+            popupImg.src = imageUrl;
+            popupImg.onload = () => {
+                const aspectRatio = (popupImg.naturalHeight / popupImg.naturalWidth) * 100;
+                document.getElementById('popup-image').style.paddingBottom = `1%`;
+                popupImg.style.display = 'block';
+            };
+    
             audio.src = audioUrl;
-
+    
             popup.classList.remove('minimized');
         }
     </script>
-
+    
     <script>
         const audio = document.getElementById("audio");
         const playPauseButton = document.getElementById("play-pause");
         const seekBar = document.getElementById("seek");
         const popup = document.getElementById("popup");
         const minimizeButton = document.getElementById("minimize-button");
-
+    
         playPauseButton.addEventListener("click", () => {
             if (audio.paused) {
                 audio.play();
@@ -295,15 +294,24 @@
                 playPauseButton.textContent = "▶️";
             }
         });
-
+    
         audio.addEventListener("timeupdate", () => {
             seekBar.value = (audio.currentTime / audio.duration) * 100;
         });
-
+    
+        audio.addEventListener("loadedmetadata", () => {
+            seekBar.value = 0;
+        });
+    
+        audio.addEventListener("ended", () => {
+            playPauseButton.textContent = "▶️";
+            seekBar.value = 0;
+        });
+    
         seekBar.addEventListener("input", () => {
             audio.currentTime = (seekBar.value / 100) * audio.duration;
         });
-
+    
         minimizeButton.addEventListener("click", () => {
             popup.classList.toggle("minimized");
         });
